@@ -1,11 +1,14 @@
 package com.test
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
+import com.test.sharemodelfrg.MainActivitySharedMode
 import java.io.File
 import java.lang.Exception
+
 
 class MainActivity : AppCompatActivity() {
     var stringInput: String =""
@@ -30,6 +33,11 @@ class MainActivity : AppCompatActivity() {
                 }
             } catch (e: Exception) {
             }
+        }
+
+        val tvSharedViewModel = findViewById<TextView>(R.id.tvSharedViewModel)
+        tvSharedViewModel.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MainActivitySharedMode::class.java))
         }
     }
 
