@@ -2,20 +2,37 @@ package com.test
 
 import android.os.Build
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
+import android.widget.EditText
+import android.widget.TextSwitcher
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
+
+import me.ibrahimsn.lib.PhoneNumberKit
 import java.io.File
 import java.lang.Exception
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     var stringInput: String =""
     var noofRailss :Int =3
+    lateinit var etEditText : EditText
+    lateinit var editText : TextInputEditText
+    lateinit var textField : TextInputLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         //railFence( stringInput, noofRailss )
         var clearcache = findViewById<TextView>(R.id.clearcache)
+         etEditText = findViewById<EditText>(R.id.etEditText)
+        editText = findViewById<TextInputEditText>(R.id.editText)
+        textField = findViewById<TextInputLayout>(R.id.textField)
         clearcache.setOnClickListener {
             try {
                 val dir: File = getCacheDir()
@@ -31,6 +48,33 @@ class MainActivity : AppCompatActivity() {
             } catch (e: Exception) {
             }
         }
+        val phoneNumberKit = PhoneNumberKit.Builder(this).setIconEnabled(false)
+            .build()
+        var local: Locale
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+
+            local = Locale("en", resources.configuration.locales.get(0).country)
+        } else {
+            local = Locale("en", resources.configuration.locale.country)
+        }
+        Log.e("local",local.country)
+        phoneNumberKit.attachToInput(textField,local.country)
+        etEditText!!.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence, p1: Int, p2: Int, p3: Int) {
+
+
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                etEditText.setText(p0)
+
+            }
+
+        })
     }
 
     private fun deleteDir(dir: File) :Boolean {
