@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -33,12 +34,8 @@ android {
 
 dependencies {
 
-<<<<<<< HEAD
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     //noinspection GradleCompatible
-=======
-    //noinspection GradleCompatible,GradleCompatible
->>>>>>> 0d2c771ff260e617434f9dfed826757d8676c7de
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -47,12 +44,11 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.6.0-alpha02'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-<<<<<<< HEAD
     //phone masking
    // implementation 'io.michaelrocks:libphonenumber-android:8.12.41'
     //implementation 'com.lionscribe.open.libphonenumber:geocoder:8.12.18.1'
     implementation 'com.github.ibrahimsn98:PhoneNumberKit:2.0.6'
-=======
+
 
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
@@ -60,5 +56,5 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-common:2.4.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
->>>>>>> 0d2c771ff260e617434f9dfed826757d8676c7de
+
 }

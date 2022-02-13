@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.test">
-
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,22 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
-<<<<<<< HEAD
         <activity android:name=".MainActivity"
             tools:ignore="Instantiatable"
             android:exported="true">
-=======
-        <activity
-            android:name=".sharemodelfrg.MainActivitySharedMode"
-            android:exported="true" />
-        <activity android:name=".MainActivity">
->>>>>>> 0d2c771ff260e617434f9dfed826757d8676c7de
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".sharemodelfrg.MainActivitySharedMode"/>
 
         <receiver
             android:name=".BootReceiver"

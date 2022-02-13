@@ -9,15 +9,13 @@ import android.util.Log
 import android.widget.EditText
 import android.widget.TextSwitcher
 import android.widget.TextView
-<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 import me.ibrahimsn.lib.PhoneNumberKit
-=======
+
 import com.test.sharemodelfrg.MainActivitySharedMode
->>>>>>> 0d2c771ff260e617434f9dfed826757d8676c7de
 import java.io.File
 import java.lang.Exception
 import java.util.*
@@ -36,9 +34,9 @@ class MainActivity : AppCompatActivity() {
 
         //railFence( stringInput, noofRailss )
         var clearcache = findViewById<TextView>(R.id.clearcache)
-         etEditText = findViewById<EditText>(R.id.etEditText)
-        editText = findViewById<TextInputEditText>(R.id.editText)
-        textField = findViewById<TextInputLayout>(R.id.textField)
+        /* etEditText = findViewById<EditText>(R.id.etEditText)*/
+       /* editText = findViewById<TextInputEditText>(R.id.editText)
+        textField = findViewById<TextInputLayout>(R.id.textField)*/
         clearcache.setOnClickListener {
             try {
                 val dir: File = getCacheDir()
@@ -54,8 +52,8 @@ class MainActivity : AppCompatActivity() {
             } catch (e: Exception) {
             }
         }
-<<<<<<< HEAD
-        val phoneNumberKit = PhoneNumberKit.Builder(this).setIconEnabled(false)
+
+        /*val phoneNumberKit = PhoneNumberKit.Builder(this).setIconEnabled(false)
             .build()
         var local: Locale
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
@@ -81,14 +79,14 @@ class MainActivity : AppCompatActivity() {
 
             }
 
-        })
-=======
+        })*/
+
 
         val tvSharedViewModel = findViewById<TextView>(R.id.tvSharedViewModel)
         tvSharedViewModel.setOnClickListener {
             startActivity(Intent(this@MainActivity, MainActivitySharedMode::class.java))
         }
->>>>>>> 0d2c771ff260e617434f9dfed826757d8676c7de
+
     }
 
     private fun deleteDir(dir: File) :Boolean {

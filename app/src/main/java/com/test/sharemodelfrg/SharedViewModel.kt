@@ -1,6 +1,7 @@
 package com.test.sharemodelfrg
 
-import android.arch.lifecycle.MutableLiveData
+
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class SharedViewModel : ViewModel() {
