@@ -1,5 +1,6 @@
 package com.test
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
@@ -8,14 +9,19 @@ import android.util.Log
 import android.widget.EditText
 import android.widget.TextSwitcher
 import android.widget.TextView
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 import me.ibrahimsn.lib.PhoneNumberKit
+=======
+import com.test.sharemodelfrg.MainActivitySharedMode
+>>>>>>> 0d2c771ff260e617434f9dfed826757d8676c7de
 import java.io.File
 import java.lang.Exception
 import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
     var stringInput: String =""
@@ -48,6 +54,7 @@ class MainActivity : AppCompatActivity() {
             } catch (e: Exception) {
             }
         }
+<<<<<<< HEAD
         val phoneNumberKit = PhoneNumberKit.Builder(this).setIconEnabled(false)
             .build()
         var local: Locale
@@ -75,6 +82,13 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+=======
+
+        val tvSharedViewModel = findViewById<TextView>(R.id.tvSharedViewModel)
+        tvSharedViewModel.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MainActivitySharedMode::class.java))
+        }
+>>>>>>> 0d2c771ff260e617434f9dfed826757d8676c7de
     }
 
     private fun deleteDir(dir: File) :Boolean {
