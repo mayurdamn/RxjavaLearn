@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="btn_execute">Execute</string>
+    <string name="btn_settings">Settings</string>
+    <string name="btn_closeapp">Close App</string>
+    <string name="btn_addurl">Add URL</string>
+    <string name="hint_url">Enter Url</string>
+    <string name="hint_email">Enter Email</string>
+    <string name="str_heading_settings">Settings</string>
+    <string name="btn_submit">Submit</string>
+    <string name="hint_add_time">Add frequency</string>
+    <string name="str_last_status">Last Status</string>
+    <string name="str_send_email">Send Email</string>
+    <string name="str_next_call">Next call in:</string>
 </resources>

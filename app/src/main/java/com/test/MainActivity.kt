@@ -1,24 +1,17 @@
 package com.test
 
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.widget.EditText
-import android.widget.TextSwitcher
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-
-import me.ibrahimsn.lib.PhoneNumberKit
+import com.test.databinding.ui.CheckUrlActivity
 
 import com.test.sharemodelfrg.MainActivitySharedMode
 import java.io.File
 import java.lang.Exception
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -39,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         textField = findViewById<TextInputLayout>(R.id.textField)*/
         clearcache.setOnClickListener {
             try {
-                val dir: File = getCacheDir()
+                /*val dir: File = getCacheDir()
                 var isDele =deleteDir(dir)
                 if(isDele){
                     if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -47,8 +40,9 @@ class MainActivity : AppCompatActivity() {
                     }
                     else {
                         super.finish();
-                    }
-                }
+                    }*/
+                startActivity(Intent(this, CheckUrlActivity::class.java))
+
             } catch (e: Exception) {
             }
         }
