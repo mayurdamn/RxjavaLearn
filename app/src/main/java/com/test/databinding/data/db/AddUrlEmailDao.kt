@@ -9,12 +9,12 @@ interface AddUrlEmailDao {
     fun getAll(): List<AddUrlEmailModel>
 
     @Insert
-     fun insert(record: AddUrlEmailModel)
+    suspend fun insertRecord(record: AddUrlEmailModel) :Long
 
     @Delete
-     fun delete(record: AddUrlEmailModel)
+    suspend fun deleteRecord(record: AddUrlEmailModel):Int
 
      @Update
-     fun updateRecord(record: AddUrlEmailModel)
+    suspend fun updateRecord(record: AddUrlEmailModel) : Int
 
 }

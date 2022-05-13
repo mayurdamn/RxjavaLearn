@@ -22,8 +22,6 @@ class CheckUrlViewModel(checkUrlActivity: CheckUrlActivity) : ViewModel() {
            var listTemp = arrayListOf(model)
            listEmailUrlLiveData.value= listTemp
 
-
-
        }
 
        fun buttonCloseApp(view: View) {

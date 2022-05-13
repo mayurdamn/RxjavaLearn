@@ -30,7 +30,8 @@ data class AddUrlEmailAdapter(var mContext: Context, val vModel: CheckUrlViewMod
                       notifyItemRemoved(position)
 
              }
-          holder.binding.textViewStatus.text=listItem[position].last_status+"-"+position
+        (listItem[position].last_status+"-"+position).also { holder.binding.textViewStatus.text = it }
+
     }
 
     override fun getItemCount(): Int {
